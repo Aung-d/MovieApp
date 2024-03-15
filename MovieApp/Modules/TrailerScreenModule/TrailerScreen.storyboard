@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trailer Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TrailerScreenViewController" id="Y6W-OH-hqX" customClass="TrailerScreenViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nb-0x-Rzz">
+                                <rect key="frame" x="16" y="67" width="32" height="32"/>
+                                <color key="backgroundColor" name="ContainerBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="aLP-ET-z5a"/>
+                                    <constraint firstAttribute="height" constant="32" id="wyf-Fp-QCU"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onActionButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="obJ-gW-LT2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trailers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-a8-aRZ">
+                                <rect key="frame" x="164.33333333333334" y="73" width="64.333333333333343" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-sV-HjT" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="115" width="393" height="221"/>
+                                <color key="backgroundColor" name="ContainerBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fnb-sV-HjT" secondAttribute="height" multiplier="16:9" id="tC5-dq-FhG"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-95-j1a">
+                                <rect key="frame" x="178" y="207" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-fG-xNT">
+                                <rect key="frame" x="0.0" y="344" width="393" height="458"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="hXM-fG-xNT" firstAttribute="top" secondItem="fnb-sV-HjT" secondAttribute="bottom" constant="8" id="1eV-27-CYB"/>
+                            <constraint firstItem="hXM-fG-xNT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4bb-Ql-sBd"/>
+                            <constraint firstItem="4Nb-0x-Rzz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="6pL-uh-hsI"/>
+                            <constraint firstItem="fnb-sV-HjT" firstAttribute="top" secondItem="4Nb-0x-Rzz" secondAttribute="bottom" constant="16" id="Azy-8u-dKm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fnb-sV-HjT" secondAttribute="trailing" id="G7I-n8-eY9"/>
+                            <constraint firstItem="9d8-a8-aRZ" firstAttribute="centerY" secondItem="4Nb-0x-Rzz" secondAttribute="centerY" id="HSZ-Mz-3he"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hXM-fG-xNT" secondAttribute="trailing" id="L5M-mq-j44"/>
+                            <constraint firstItem="4Nb-0x-Rzz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ngz-xU-nwm"/>
+                            <constraint firstItem="Dwj-95-j1a" firstAttribute="centerY" secondItem="fnb-sV-HjT" secondAttribute="centerY" id="aBA-lc-TEZ"/>
+                            <constraint firstItem="9d8-a8-aRZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aJ6-qM-sDc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hXM-fG-xNT" secondAttribute="bottom" constant="16" id="dja-T5-muT"/>
+                            <constraint firstItem="fnb-sV-HjT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sBj-YX-rfJ"/>
+                            <constraint firstItem="Dwj-95-j1a" firstAttribute="centerX" secondItem="fnb-sV-HjT" secondAttribute="centerX" id="wRN-lu-YoY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Dwj-95-j1a" id="qOW-Xo-cMg"/>
+                        <outlet property="playerView" destination="fnb-sV-HjT" id="tYL-Hg-Tav"/>
+                        <outlet property="trailerTableView" destination="hXM-fG-xNT" id="ccu-xq-u9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <namedColor name="AppSecondaryColor">
+            <color red="0.082000002264976501" green="0.086000002920627594" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ContainerBackgroundColor">
+            <color red="0.18000000715255737" green="0.19200000166893005" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

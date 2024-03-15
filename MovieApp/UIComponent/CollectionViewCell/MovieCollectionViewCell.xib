@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="gTV-IL-0wX" customClass="MovieCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="472"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="472"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w33-tC-qdn">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="472"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" image="DummyImage" translatesAutoresizingMaskIntoConstraints="NO" id="6MS-ed-UDT">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="450.33333333333331"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ty-WP-vbR">
+                                <rect key="frame" x="0.0" y="458.33333333333326" width="440" height="13.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-iC-xoh">
+                                <rect key="frame" x="201.66666666666666" y="206.66666666666666" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6MS-ed-UDT" firstAttribute="leading" secondItem="w33-tC-qdn" secondAttribute="leading" id="11v-Tk-yti"/>
+                            <constraint firstAttribute="bottom" secondItem="9Ty-WP-vbR" secondAttribute="bottom" id="6ew-cD-o5x"/>
+                            <constraint firstItem="LXY-iC-xoh" firstAttribute="centerX" secondItem="6MS-ed-UDT" secondAttribute="centerX" id="Hcb-op-F5N"/>
+                            <constraint firstAttribute="trailing" secondItem="6MS-ed-UDT" secondAttribute="trailing" id="O5Y-OO-U7W"/>
+                            <constraint firstItem="9Ty-WP-vbR" firstAttribute="leading" secondItem="w33-tC-qdn" secondAttribute="leading" id="PZI-Xp-5dG"/>
+                            <constraint firstItem="LXY-iC-xoh" firstAttribute="centerY" secondItem="6MS-ed-UDT" secondAttribute="centerY" id="R6Y-LU-otl"/>
+                            <constraint firstAttribute="trailing" secondItem="9Ty-WP-vbR" secondAttribute="trailing" id="UUA-mI-xJB"/>
+                            <constraint firstItem="9Ty-WP-vbR" firstAttribute="top" secondItem="6MS-ed-UDT" secondAttribute="bottom" constant="8" id="YnC-n1-1MA"/>
+                            <constraint firstItem="6MS-ed-UDT" firstAttribute="top" secondItem="w33-tC-qdn" secondAttribute="top" id="yzO-kR-fGX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="w33-tC-qdn" secondAttribute="bottom" id="Bbk-gJ-XD3"/>
+                <constraint firstItem="w33-tC-qdn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rjm-6t-pvS"/>
+                <constraint firstAttribute="trailing" secondItem="w33-tC-qdn" secondAttribute="trailing" id="r0O-rC-Nt8"/>
+                <constraint firstItem="w33-tC-qdn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tHj-dm-vki"/>
+            </constraints>
+            <size key="customSize" width="440" height="472"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="LXY-iC-xoh" id="OCq-ZG-FB8"/>
+                <outlet property="movieImage" destination="6MS-ed-UDT" id="5uK-6g-VpB"/>
+                <outlet property="movieName" destination="9Ty-WP-vbR" id="eHD-8o-zxQ"/>
+            </connections>
+            <point key="canvasLocation" x="271.75572519083971" y="167.6056338028169"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="DummyImage" width="146.66667175292969" height="240"/>
+    </resources>
+</document>
