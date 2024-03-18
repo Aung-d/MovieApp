@@ -194,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C81714902BA1FA2D00934B67 /* MovieApp */,
+				C8F0AB402BA4152E00974D95 /* MovieApp.xcdatamodeld */,
 				C81714AA2BA1FA2F00934B67 /* MovieAppTests */,
 				C81714B42BA1FA2F00934B67 /* MovieAppUITests */,
 				C817148F2BA1FA2D00934B67 /* Products */,
@@ -398,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				C8F0AB432BA4196200974D95 /* CoreDataService.swift */,
-				C8F0AB402BA4152E00974D95 /* MovieApp.xcdatamodeld */,
 			);
 			path = LocalDBService;
 			sourceTree = "<group>";
@@ -1064,8 +1064,7 @@
 				C8F0AB412BA4152E00974D95 /* MovieApp.xcdatamodel */,
 			);
 			currentVersion = C8F0AB412BA4152E00974D95 /* MovieApp.xcdatamodel */;
-			name = MovieApp.xcdatamodeld;
-			path = /Users/winter/AKO/Personal/Development/MobileProject/XCodeProject/MovieApp/MovieApp/Service/LocalDBService/MovieApp.xcdatamodeld;
+			path = MovieApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
