@@ -148,7 +148,7 @@ extension HomeScreenViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let movieId = switch collectionViewHeaders[indexPath.section] {
+        let homeMovieId = switch collectionViewHeaders[indexPath.section] {
         case MovieHeader.NOW_PLAYING:
             nowPlayingMovieData[indexPath.item].id
             
@@ -162,6 +162,7 @@ extension HomeScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         
         if ConnectionService.isConnectedToNetwork() {
+            let movieId = isSearchViewMode ? searchMovieData[indexPath.item].id : homeMovieId
             presenter?.onMovieItemClicked(movieId)
             return
         }
